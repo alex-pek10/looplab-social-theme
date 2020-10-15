@@ -1,16 +1,16 @@
-console.log("Created by Alex Myers");
+console.log('Created by Alex Myers');
 
 // Init Scrollspy
-$("body").scrollspy({ target: "#main-nav" });
+$('body').scrollspy({ target: '#main-nav' });
 
 // Smooth Scrolling
-$("#main-nav a").on("click", function (e) {
-  if (this.hash !== "") {
+$('#main-nav a').on('click', function (e) {
+  if (this.hash !== '') {
     e.preventDefault();
 
     const hash = this.hash;
 
-    $("html, body").animate(
+    $('html, body').animate(
       {
         scrollTop: $(hash).offset().top,
       },
