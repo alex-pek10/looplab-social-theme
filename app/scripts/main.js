@@ -1,9 +1,23 @@
-console.log('\'Allo \'Allo!');
+console.log("Created by Alex Myers");
 
-// Uncomment to enable Bootstrap tooltips
-// https://getbootstrap.com/docs/4.0/components/tooltips/#example-enable-tooltips-everywhere
-// $(function () { $('[data-toggle="tooltip"]').tooltip(); });
+// Init Scrollspy
+$("body").scrollspy({ target: "#main-nav" });
 
-// Uncomment to enable Bootstrap popovers
-// https://getbootstrap.com/docs/4.0/components/popovers/#example-enable-popovers-everywhere
-// $(function () { $('[data-toggle="popover"]').popover(); });
+// Smooth Scrolling
+$("#main-nav a").on("click", function (e) {
+  if (this.hash !== "") {
+    e.preventDefault();
+
+    const hash = this.hash;
+
+    $("html, body").animate(
+      {
+        scrollTop: $(hash).offset().top,
+      },
+      800,
+      function () {
+        window.location.hash = hash;
+      }
+    );
+  }
+});
