@@ -1,1 +1,0 @@
-"use strict";$("body").scrollspy({target:"#main-nav"}),$("#main-nav a").on("click",function(t){var a;""!==this.hash&&(t.preventDefault(),a=this.hash,$("html, body").animate({scrollTop:$(a).offset().top},800,function(){window.location.hash=a}))});
